@@ -1,5 +1,5 @@
 /*!
- * ng Classifier v0.1.0
+ * ng Classifier v0.1.1
  * A browserify transform for ng-classify.
  * https://github.com/kamalkhan/ng-classifier
  *
