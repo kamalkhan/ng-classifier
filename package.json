@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/kamalkhan/ng-classifier.git"
   },
-  "keywords": [],
+  "keywords": ["browserify-transform", "ng-classify", "coffeeify", "coffeescript", "browserify"],
   "author": "M. Kamal Khan <shout@bhittani.com> (http://bhittani.com)",
   "license": "MIT",
   "bugs": {
@@ -24,5 +24,9 @@
     "gulp-header": "^1.2.2",
     "gulp-rename": "^1.2.0",
     "gulp-util": "^3.0.3"
+  },
+  "dependencies": {
+    "ng-classify": "^4.1.1",
+    "through2": "^2.0.0"
   }
 }
