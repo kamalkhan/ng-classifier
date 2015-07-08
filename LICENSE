@@ -1,8 +1,9 @@
-Ng Classifier v0.1.0
+ng Classifier
 http://bhittani.com
 https://github.com/kamalkhan/ng-classifier
 
-A browserify transformer for ng-classify.
+A browserify transform for ng-classify.
+https://github.com/CaryLandholt/ng-classify
 
 The MIT License (MIT)
 

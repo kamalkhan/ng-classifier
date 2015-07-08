@@ -1,6 +1,7 @@
-Ng Classifier [![Build Status](https://travis-ci.org/kamalkhan/NgClassifier.svg?branch=master)](https://travis-ci.org/kamalkhan/NgClassifier)
+ng Classifier [![Build Status](https://travis-ci.org/kamalkhan/NgClassifier.svg?branch=master)](https://travis-ci.org/kamalkhan/NgClassifier)
 ======
-A browserify transformer for ng-classify.
+A browserify transform for ng-classify.
+[https://github.com/CaryLandholt/ng-classify](https://github.com/CaryLandholt/ng-classify)
 
 **Table of contents**
 
