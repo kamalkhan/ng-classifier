@@ -16,25 +16,18 @@
   ngClassify = require('ng-classify');
 
   module.exports = function(file, args) {
-    var key, options, val;
-    options = void 0;
-    if (typeof args === 'function') {
-      options = args;
+    var config;
+    if ((args == null) || (args.config == null)) {
+      config = void 0;
     }
-    if (typeof args === 'object') {
-      for (key in args) {
-        val = args[key];
-        if (options == null) {
-          options = {};
-        }
-        options[key] = val;
-      }
+    if (args.config != null) {
+      config = args.config;
     }
     return through(function(buf, enc, next) {
       if ((path.extname(file)) !== '.coffee') {
         return next();
       }
-      this.push(ngClassify(buf.toString('utf8'), options));
+      this.push(ngClassify(buf.toString('utf8'), config));
       return next();
     });
   };
