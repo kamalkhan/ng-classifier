@@ -7,15 +7,36 @@
  * Copyright (c) 2015 M. Kamal Khan <shout@bhittani.com>
  */(function() {
   'use strict';
-  var ngClassifier;
+  var ngClassify, path, through;
 
-  ngClassifier = (function() {
-    function ngClassifier() {}
+  through = require('through2');
 
-    return ngClassifier;
+  path = require('path');
 
-  })();
+  ngClassify = require('ng-classify');
 
-  module.exports = ngClassifier;
+  module.exports = function(file, args) {
+    var key, options, val;
+    options = void 0;
+    if (typeof args === 'function') {
+      options = args;
+    }
+    if (typeof args === 'object') {
+      for (key in args) {
+        val = args[key];
+        if (options == null) {
+          options = {};
+        }
+        options[key] = val;
+      }
+    }
+    return through(function(buf, enc, next) {
+      if ((path.extname(file)) !== '.coffee') {
+        return next();
+      }
+      this.push(ngClassify(buf.toString('utf8'), options));
+      return next();
+    });
+  };
 
 }).call(this);
