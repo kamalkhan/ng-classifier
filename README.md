@@ -20,7 +20,17 @@ $ npm install --save-dev ng-classifier
 
 # Usage
 
-Usage instructions
+Use `ng-classifier` as the browserify transform.
+```js
+transform: [
+    ['ng-classifier', {config: {
+        appName: 'App' // ng-classify arguments
+    }}],
+    ['coffeeify']
+]
+```
+ng-classify arguments can be passed in the config object.
+*Note* `coffeeify` is not included in this module. It is only listed here to convert coffee to js.
 
 # Development
 
